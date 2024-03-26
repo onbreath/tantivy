@@ -116,6 +116,11 @@ impl Snippet {
         &self.highlighted
     }
 
+    /// Returns a list of collapsed highlighted positions from the `Snippet`.
+    pub fn collapsed_highlighted(&self) -> Vec<Range<usize>> {
+        collapse_overlapped_ranges(&self.highlighted)
+    }
+
     /// Sets highlighted prefix and postfix.
     pub fn set_snippet_prefix_postfix(&mut self, prefix: &str, postfix: &str) {
         self.snippet_prefix = prefix.to_string();

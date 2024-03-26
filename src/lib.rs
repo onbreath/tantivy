@@ -161,7 +161,7 @@ pub mod termdict;
 mod reader;
 
 pub use self::reader::{IndexReader, IndexReaderBuilder, ReloadPolicy, Warmer};
-mod snippet;
+pub mod snippet;
 pub use self::snippet::{Snippet, SnippetGenerator};
 
 mod docset;
